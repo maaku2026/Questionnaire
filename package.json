@@ -1,0 +1,12 @@
+{
+  "name": "maaku-tattoo-brief",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 3001 --ip 0.0.0.0",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.42.0"
+  }
+}

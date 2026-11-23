@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Tattoo website brief — Maaku</title>
+<meta name="description" content="A short, easy questionnaire so I can build your tattoo website the way you want it. Mostly ticking boxes. Skip anything you don't care about." />
+<meta name="color-scheme" content="dark" />
+<meta name="theme-color" content="#000000" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to the questions</a>
+
+<header class="topbar">
+  <div class="topbar__row">
+    <span class="mark">MAAKU <i>·</i> BRIEF</span>
+    <span class="topbar__step" id="stepLabel">Start here</span>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress">
+    <div class="progress__fill" id="progressFill"></div>
+  </div>
+</header>
+
+<main id="main">
+  <form id="form" novalidate autocomplete="on">
+    <div id="steps"></div>
+    <p class="form-error" id="formError" role="alert" hidden></p>
+  </form>
+
+  <section class="done" id="done" hidden aria-live="polite">
+    <p class="kicker">Sent</p>
+    <h2>That's it — thank you.</h2>
+    <p class="done__lead">Your answers are in my inbox. I'll read them properly and come back to you with a plan, usually within a couple of days.</p>
+    <div class="done__card">
+      <p class="done__card-title">One last thing — the photos</p>
+      <p>Email 10–15 finished tattoos you're happiest with, as files if you can. That's the single biggest thing that decides how good the site looks.</p>
+      <a class="btn btn--primary" id="photoMail" href="mailto:chelvin.marc@gmail.com">Email my photos</a>
+    </div>
+    <p class="done__small">Something to add? Reply to the email, or write to <a href="mailto:chelvin.marc@gmail.com">chelvin.marc@gmail.com</a>.</p>
+  </section>
+</main>
+
+<nav class="nav" id="nav" aria-label="Step navigation">
+  <div class="nav__inner">
+    <button type="button" class="btn btn--ghost" id="back">Back</button>
+    <span class="nav__count" id="navCount"></span>
+    <button type="button" class="btn btn--primary" id="next">Continue</button>
+  </div>
+</nav>
+
+<script src="/app.js" type="module"></script>
+</body>
+</html>
